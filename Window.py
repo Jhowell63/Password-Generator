@@ -2,7 +2,7 @@ from tkinter import *
 
 
 window = Tk() 
-window.geometry("450x450")
+window.geometry("475x475")
 
 window.title("Password Generator")
 
@@ -46,6 +46,9 @@ char_no_button.place(x=400, y= 250)
 button = Button(window, text='Submit', font=('Ink Free', 10, 'bold'), bg='#2b2b2a', fg='#2ee800', activebackground='#2ee800', activeforeground='#2b2b2a')
 button.place(x=window.winfo_width() // 2 - button.winfo_reqwidth() // 2, y=300) 
 
+pwd_output_box = Text(window, height=6, width=55, bg="#2b2b2a", fg="#2ee800")
+pwd_output_box.place(x=15, y=350)
 
+pwd_output_box.config(state=DISABLED)
  
 window.mainloop()
