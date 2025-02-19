@@ -38,15 +38,12 @@ def generate_password(pwd_length, numbers=True, special_characters=True):
 
     return pwd        
 
-min_length = int(input("Enter the minimim length: "))
-max_length = int(input("Enter the max length: "))
+
 if max_length > 20:
     password_length = random.randint(min_length, 20)
 else:
     password_length = random.randint(min_length, max_length)
 
-has_number = input("Do you want to have numbers (y/n): ").lower() == "y"
-has_special = input("Do you want to have special characters (y/n): " ).lower() == "y"
 
 
 pwd = generate_password(password_length, has_number, has_special)
