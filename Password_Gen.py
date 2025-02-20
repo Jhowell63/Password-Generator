@@ -36,17 +36,4 @@ def generate_password(pwd_length, numbers=True, special_characters=True):
         if len(pwd) > pwd_length:
             pwd = pwd[:pwd_length]
 
-    return pwd        
-
-
-if max_length > 20:
-    password_length = random.randint(min_length, 20)
-else:
-    password_length = random.randint(min_length, max_length)
-
-
-
-pwd = generate_password(password_length, has_number, has_special)
-
-print("The generated password is : ", pwd)
-print(password_length) 
+    return pwd
